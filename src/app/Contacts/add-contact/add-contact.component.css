@@ -1,0 +1,78 @@
+.all {
+  /* background-image: url("../../../../img/add_bk.jpg"); */
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: "#152c3c";
+}
+.heading {
+  /* text-align:center; */
+  font-size: 30px;
+  margin-top: 20px;
+  color: aliceblue;
+}
+.container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 30px;
+  width: 600px;
+  height: 400px;
+}
+.imgInput {
+  width: 200px;
+  margin: auto;
+  display: block;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 200px;
+  /* background-image: url("../../../../img/img_add.png"); */
+  background-position: center;
+  border-radius: 300px;
+}
+
+.imgInputLabel {
+  width: 200px;
+  margin: auto;
+  display: block;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-position: center;
+  border-radius: 300px;
+}
+.inputFields {
+  width: 50vw;
+  height: 20px;
+  border: 3px solid blue;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+}
+
+.label {
+  color: bisque;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.addContactBtn {
+  width: 40%;
+  margin: auto;
+  background-color: orangered;
+  color: antiquewhite;
+  height: 34px;
+  border: 2px solid black;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btnContainer {
+  width: 100%;
+  align-content: center;
+}

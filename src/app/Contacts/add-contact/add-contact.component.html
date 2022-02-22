@@ -1,0 +1,38 @@
+<app-anav-bar></app-anav-bar>
+
+<div class="all">
+
+
+
+    <form class="container" [formGroup]="addContact" (ngSubmit)="onSubmit()">
+        <p class="heading">
+            Add Contact
+        </p>
+
+
+        <img class="imgInput" src="{{url}}"><input class="imgInputLabel" type="file" (change)="onSelectFile($event)"
+            style="color: aliceblue;">
+
+        <br>
+        <label class="label">Name</label>
+        <br>
+        <input class="inputFields" type="text" formControlName="name" placeholder="Enter Contact Name Here ">
+        <br>
+        <label class="label">Adress</label>
+        <br>
+        <input class="inputFields" type="text" formControlName="adress" placeholder="Enter Adress of Contact Here ">
+        <br>
+        <label class="label">Phone Number</label>
+        <br>
+        <input class="inputFields"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+            formControlName="phoneNumber" placeholder="Enter Adress of Contact Here ">
+        <br>
+        <div class=" btnContainer" type="submit">
+            <button class="addContactBtn">
+                Add Contact
+            </button>
+
+        </div>
+    </form>
+</div>

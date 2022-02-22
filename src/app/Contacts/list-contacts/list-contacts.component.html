@@ -1,0 +1,79 @@
+<app-anav-bar></app-anav-bar>
+
+
+<div class="container">
+    <table>
+
+        <caption>Contact List</caption>
+        <tr>
+
+            <th>Name </th>
+            <th>phone Number </th>
+            <th>Adress </th>
+            <th>Profile Pic</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+
+
+        <tr *ngFor="let item of phoneNum">
+
+            <td>{{item.name}}</td>
+            <td>{{item.num}}</td>
+            <td>{{item.adress}}</td>
+            <td><img style="width: 100px; height: 100px;" src={{item.url}}></td>
+            <td><img style="width: 40px; height: 40px; cursor: pointer;"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ93N_uDoCKDP4v3Gc_3aNtKvzi-Fy4kAPgVg&usqp=CAU"
+                    (click)="editItem(item, phoneNum)">
+            </td>
+
+            <td><img style="width: 40px; height: 40px; cursor: pointer;"
+                    src="https://flyclipart.com/thumb2/bin-delete-garbage-recycle-remove-trash-icon-695067.png"
+                    (click)="deleteItem(item)">
+            </td>
+
+
+
+            <div *ngIf="item.isEdit">
+
+                <div class="all">
+                    <form class="container">
+
+                        <img style="width: 100px; height: 100px;" class="imgInput" src={{url}}><input
+                            class="imgInputLabel" type="file" (change)="onSelectFile($event)" style="color: aliceblue;">
+
+                        <br>
+                        <label class="label">Name</label>
+                        <br>
+                        <input class="inputFields" type="text" [(ngModel)]="name" name="name"
+                            placeholder="Enter Contact Name Here ">
+                        <br>
+                        <label class="label">Adress</label>
+                        <br>
+                        <input class="inputFields" type="text" [(ngModel)]="adress" name="adress"
+                            placeholder="Enter Adress of Contact Here ">
+                        <br>
+                        <label class="label">Phone Number</label>
+                        <br>
+                        <input class="inputFields"
+                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                            [(ngModel)]="phoneNumber" name="phoneNumber" placeholder="Enter Adress of Contact Here ">
+                        <br>
+                        <div class=" btnContainer">
+                            <button class="addContactBtn" (click)="onSubmitEdit(item)">
+                                Update Contact
+                            </button>
+                            <button class="addContactBtn" (click)="onSubmitCancel(item)">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </tr>
+
+
+    </table>
+
+
+</div>

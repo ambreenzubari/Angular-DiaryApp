@@ -1,0 +1,24 @@
+<div class="all">
+
+
+
+    <form class="container" [formGroup]="forgetPassForm" (ngSubmit)="onSubmit()">
+        <p class="heading">
+            Forget Password Verification
+        </p>
+
+
+        <br>
+        <label class="label">Enter Email</label>
+        <br>
+        <input class="inputFields" type="email" formControlName="email" placeholder="Enter email here ">
+        <br>
+
+        <div class=" btnContainer" type="submit">
+            <button class="addContactBtn">
+                Send Verification Email
+            </button>
+
+        </div>
+    </form>
+</div>

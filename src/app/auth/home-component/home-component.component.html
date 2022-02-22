@@ -1,0 +1,78 @@
+<div class="all">
+
+    <!-- Create Account -->
+
+
+
+    <form class="container" *ngIf="isSignIn==false else elseBlock" [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
+        <p class="heading">
+            Create Account
+        </p>
+        <label class="label">Enter Email</label>
+        <br>
+        <input class="inputFields" type="text" formControlName="email" placeholder="Enter Contact Email Here ">
+        <br>
+        <label class="label">Enter Password</label>
+        <br>
+        <input class="inputFields" type="password" formControlName="password" placeholder="Enter your password here ">
+        <br>
+        <label class="label">Confirm Passowrd</label>
+        <br>
+        <input class="inputFields" type="password" formControlName="confirmPassword"
+            placeholder="Enter Adress of Contact Here ">
+        <br>
+        <div class=" btnContainer">
+            <button class="addContactBtn" type="submit">
+                Create Account
+            </button>
+            <p class="label" style="cursor: pointer;" (click)="onCreateAccount_p()" routerLink=".ListContact">sign in
+            </p>
+
+        </div>
+    </form>
+
+
+
+    <!-- sign in -->
+
+    <ng-template #elseBlock>
+
+
+
+
+        <form class="container" *ngIf="phoneNumberService.isLoggedIn==false" [formGroup]="signInForm"
+            (ngSubmit)="onSignIn()">
+            <p class="heading">
+                Sign In
+            </p>
+            <label class="label">Enter Email</label>
+            <br>
+            <input class="inputFields" type="text" formControlName="email" placeholder="Enter Contact Email Here ">
+            <br>
+            <label class="label">Enter Password</label>
+            <br>
+            <input class="inputFields" type="password" formControlName="password"
+                placeholder="Enter your password here ">
+            <br>
+
+            <div class=" btnContainer">
+                <button class="addContactBtn" style="text-decoration: none;">
+                    <p>Sign In</p>
+                </button>
+
+
+            </div>
+            <p class="label" style="cursor: pointer; margin-top: 20px; margin-left:10px;" (click)="onClicksignIn_p()">
+                Create Account
+            </p>
+
+            <p style="cursor: pointer; color: #fff; margin-left:10px; text-decoration: none; margin-top: 20px; position:relative;"
+                routerLink="/ForgetPass">
+                Forget Password</p>
+        </form>
+
+
+    </ng-template>
+
+
+</div>

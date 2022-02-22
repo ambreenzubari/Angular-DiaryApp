@@ -1,0 +1,117 @@
+table {
+  width: 600px;
+  margin-top: 100px;
+  margin-left: 20vw;
+  /* border-spacing: 10px; */
+}
+caption {
+  font-size: 30px;
+  color: white;
+}
+th {
+  text-align: left;
+  height: 20px;
+  color: wheat;
+  background-color: rgb(22, 22, 167);
+}
+label {
+  color: white;
+}
+td {
+  background-color: rgb(151, 151, 240);
+  color: black;
+}
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: 1px solid white;
+}
+th,
+td {
+  padding: 10px;
+}
+
+th,
+caption {
+  text-align: left;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+/* 
+.all {
+    width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: "#152c3c";
+} */
+/* 
+.container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 30px;
+  width: 600px;
+  height: 400px;
+} */
+.imgInput {
+  width: 80px;
+  margin: auto;
+  display: block;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 200px;
+  /* background-image: url("../../../../img/img_add.png"); */
+  background-position: center;
+  border-radius: 300px;
+}
+
+.imgInputLabel {
+  width: 80px;
+  margin: auto;
+  display: block;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-position: center;
+  border-radius: 300px;
+}
+.inputFields {
+  width: 20vw;
+  height: 20px;
+  border: 3px solid blue;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+}
+
+.label {
+  color: bisque;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.addContactBtn {
+  width: 40%;
+  margin: auto;
+  background-color: orangered;
+  color: antiquewhite;
+  height: 34px;
+  border: 2px solid black;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btnContainer {
+  width: 100%;
+  align-content: center;
+}
